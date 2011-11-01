@@ -91,7 +91,6 @@ class FileBundler
 		}
 		
 		private function compressCSSBundle($css){
-			$css = preg_replace('!//[^\n\r]+!', '', $css);	            // comments
 			$css = preg_replace('/[\r\n\t\s]+/s', ' ', $css);           // new lines, multiple spaces/tabs/newlines
 			$css = preg_replace('#/\*.*?\*/#', '', $css);               // comments
 			$css = preg_replace('/[\s]*([\{\},;:])[\s]*/', '\1', $css); // spaces before and after marks
